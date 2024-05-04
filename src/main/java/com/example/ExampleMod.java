@@ -1,13 +1,14 @@
 package com.example;
 
-import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid = "examplemod", useMetadata=true)
+@Mod(modid = "examplemod", useMetadata = true)
 public class ExampleMod {
+    public static Config config;
+
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        System.out.println("Dirt: " + Blocks.dirt.getUnlocalizedName());
+        config = new Config();
     }
 }
